@@ -32,30 +32,33 @@ vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 require("lazy").setup(
-      {
-	-- monokai colores
-	{"tanvirtin/monokai.nvim",
-	config = function()
-	    vim.cmd.colorscheme("monokai_soda")
-	end,},
-	{--treesitter
-	    "nvim-treesitter/nvim-treesitter",
-	    config= function()
-		require("nvim-treesitter.configs").setup(
-		{
-		    ensure_installed = {"c" , "lua", "vim", "vimdoc", "query" },
-		    auto_install = true,
+{
+    -- Colores
 
-		    highlight = {
-			enable = true,
-		    },
-		})
-	    end,
-    },
+    { "scottmckendry/cyberdream.nvim",
+    config = function()
+	vim.cmd.colorscheme("cyberdream")
+    end,
+},
+{--treesitter
+    "nvim-treesitter/nvim-treesitter",
+    config= function()
+	require("nvim-treesitter.configs").setup(
+	{
+	    ensure_installed = {"c" , "lua", "vim", "vimdoc", "query" },
 
-  -- Configure any other settings here. See the documentation for more details.
-  -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "habamax" } },
-  -- automatically check for plugin updates
-  checker = { enabled = true },
+	    auto_install = true,
+
+	    highlight = {
+		enable = true,
+	    },
+	})
+    end,
+},
+
+-- Configure any other settings here. See the documentation for more details.
+-- colorscheme that will be used when installing plugins.
+install = { colorscheme = { "habamax" } },
+-- automatically check for plugin updates
+checker = { enabled = true },
 })

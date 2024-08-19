@@ -46,7 +46,7 @@ require("lazy").setup(
 	require("nvim-treesitter.configs").setup(
 	{
 	    ensure_installed = {"c" , "lua", "vim", "vimdoc", "query" },
-
+	    --auto install instala lenguaje en el que se va a trabajar
 	    auto_install = true,
 
 	    highlight = {

@@ -55,7 +55,15 @@ require("lazy").setup(
 	})
     end,
 },
-
+-- Markdown preview con UML
+{
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function()
+	vim.fn["mkdp#util#install"]()
+    end,
+},
 -- Configure any other settings here. See the documentation for more details.
 -- colorscheme that will be used when installing plugins.
 install = { colorscheme = { "habamax" } },

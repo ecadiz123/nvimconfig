@@ -12,7 +12,7 @@ vim.opt.shiftwidth = 4
 
 vim.opt.virtualedit = "block"
 
-vim.opt.ignorecase = true
+vim.opt.ignorecase = false
 
 vim.opt.termguicolors = true
 
